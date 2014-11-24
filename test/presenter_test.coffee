@@ -1,6 +1,6 @@
 assert = require 'assertive'
 
-presenter = require '../src/presenter'
+presenter = require '../lib/presenter'
 
 describe 'Presenter', ->
   it 'exists', ->
