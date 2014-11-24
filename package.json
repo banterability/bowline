@@ -1,0 +1,12 @@
+{
+  "name": "bowline",
+  "version": "0.1.0",
+  "main": "src/index.coffee",
+  "author": "Jeff Long",
+  "license": "MIT",
+  "description": "An involuntary API for Supermechanical's Twine.",
+  "dependencies": {
+    "coffee-script": "^1.8.0",
+    "request": "^2.48.0"
+  }
+}
