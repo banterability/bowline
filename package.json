@@ -8,5 +8,13 @@
   "dependencies": {
     "coffee-script": "^1.8.0",
     "request": "^2.48.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/banterability/bowline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/banterability/bowline/issues"
+  },
+  "homepage": "https://github.com/banterability/bowline"
 }
