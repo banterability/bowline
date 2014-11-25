@@ -17,7 +17,18 @@ Key        | Value
 
 ## Usage
 
-tk
+```coffeescript
+Bowline = require 'bowline'
+
+client = new Bowline {
+  email: 'twine@example.net'
+  password: 'sekret'
+  deviceId: '00ff00ff00ff00ff'
+}
+
+client.fetch (err, values) ->
+  # do something
+```
 
 ## Response Structure
 
