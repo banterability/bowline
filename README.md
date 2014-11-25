@@ -3,11 +3,13 @@ Bowline
 
 An involuntary API for Supermechanical's [Twine][0].
 
+
 ## Installation
 
 ```bash
 npm install bowline
 ```
+
 
 ## Usage
 
@@ -34,6 +36,7 @@ client.fetch (err, values) ->
   # do something
 ```
 
+
 ## Response Structure
 
 Key               | Sample Value | Notes
@@ -45,3 +48,11 @@ Key               | Sample Value | Notes
 `isVibrating`     | `false`      | `true` or `false`
 `batteryVoltage`  | `2688903`    | in microvolts
 `updateMode`      | `'normal'`   | `normal` or `fast`
+
+
+## Development
+
+Command      | Description
+-------      | ------------
+`make build` | Compile from Coffeescript
+`make test`  | Compile and run tests
