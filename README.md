@@ -3,7 +3,13 @@ Bowline
 
 An involuntary API for Supermechanical's [Twine][0].
 
-## Configuration
+## Installation
+
+```bash
+npm install bowline
+```
+
+## Usage
 
 Key        | Value
 ---        | -----
@@ -14,8 +20,6 @@ Key        | Value
 [0]: http://supermechanical.com/twine/
 [1]: https://twine.cc/login
 [2]: http://cl.ly/TeNO/Screen_Shot_2014-01-30_at_12.40.48_PM.jpg
-
-## Usage
 
 ```coffeescript
 Bowline = require 'bowline'
