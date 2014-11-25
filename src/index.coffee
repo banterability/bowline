@@ -1,11 +1,12 @@
-request = require 'request'
 presentValues = require './presenter'
+request = require 'request'
 
 class Bowline
   constructor: (options = {}) ->
+    @authorized = false
+    @deviceId = options.deviceId
     @email = options.email
     @password = options.password
-    @deviceId = options.deviceId
 
     unless @email && @password && @deviceId
       throw new Error 'missing required parameter'
@@ -14,22 +15,25 @@ class Bowline
     cookieJar = request.jar()
     options =
       form: {@email, @password}
-      url: 'https://twine.cc/login'
       jar: cookieJar
+      url: 'https://twine.cc/login'
 
-    request.post options, (err, res, body) ->
-      callback err, {cookies: cookieJar}
+    request.post options, (err, res, body) =>
+      @cookies = cookieJar
+      @authorized = true
+      callback err, null
 
   fetch: (callback) ->
-    deviceId = @deviceId
+    return @fetchData callback if @authorized
+    @authorize => @fetchData callback
 
-    @authorize (err, data) ->
-      options =
-        url: "https://twine.cc/#{deviceId}/rt?cached=1"
-        json: true
-        jar: data.cookies
+  fetchData: (callback) ->
+    options =
+      jar: @cookies
+      json: true
+      url: "https://twine.cc/#{@deviceId}/rt?cached=1"
 
-      request.get options, (err, res, body) ->
-        callback err, presentValues(body)
+    request.get options, (err, res, body) ->
+      callback err, presentValues(body)
 
 module.exports = Bowline
