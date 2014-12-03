@@ -33,7 +33,7 @@ var client = new Bowline({
 });
 
 client.fetch(function(err, values){
-  # do something
+  // do something
 });
 ```
 
