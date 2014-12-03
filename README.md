@@ -23,17 +23,18 @@ Key        | Value
 [1]: https://twine.cc/login
 [2]: http://cl.ly/TeNO/Screen_Shot_2014-01-30_at_12.40.48_PM.jpg
 
-```coffeescript
-Bowline = require 'bowline'
+```javascript
+var Bowline = require('bowline');
 
-client = new Bowline {
-  email: 'twine@example.net'
-  password: 'sekret'
+var client = new Bowline({
+  email: 'twine@example.net',
+  password: 'sekret',
   deviceId: '00ff00ff00ff00ff'
-}
+});
 
-client.fetch (err, values) ->
+client.fetch(function(err, values){
   # do something
+});
 ```
 
 
