@@ -32,13 +32,19 @@ var client = new Bowline({
   deviceId: '00ff00ff00ff00ff'
 });
 
-client.fetch(function(err, values){
+client.fetch(function(err, response){
   // do something
 });
 ```
 
 
 ## Response Structure
+
+```javascript
+{
+  values: {} // see description below
+}
+```
 
 ### Values
 
