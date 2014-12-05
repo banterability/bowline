@@ -9,6 +9,9 @@ VALUE_MAP =
   "07": 'updateMode'
 
 module.exports = (response) ->
+  values: presentValues(response)
+
+presentValues = (response) ->
   output = {}
 
   for tuple in response.values

@@ -10,7 +10,7 @@ describe 'Presenter', ->
 
   describe 'renames and formats values', ->
     before ->
-      @actual = presenter(sampleJSON)
+      @actual = presenter(sampleJSON).values
 
     it 'extracts firmware version', ->
       assert.equal '2.0.2', @actual.firmwareVersion

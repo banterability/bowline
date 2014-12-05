@@ -1,4 +1,4 @@
-presentValues = require './presenter'
+presentData = require './presenter'
 request = require 'request'
 
 class Bowline
@@ -34,6 +34,6 @@ class Bowline
       url: "https://twine.cc/#{@deviceId}/rt?cached=1"
 
     request.get options, (err, res, body) ->
-      callback err, presentValues(body)
+      callback err, presentData(body)
 
 module.exports = Bowline
