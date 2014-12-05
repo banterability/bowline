@@ -8,9 +8,6 @@ VALUE_MAP =
   # "06": not currently used
   "07": 'updateMode'
 
-module.exports = (response) ->
-  values: presentValues(response)
-
 presentValues = (response) ->
   output = {}
 
@@ -33,3 +30,5 @@ makeValuesUseful = (values) ->
   values.updateMode = if values.updateMode == 0 then 'normal' else 'fast'
 
   values
+
+module.exports = presentValues
