@@ -40,6 +40,8 @@ client.fetch(function(err, values){
 
 ## Response Structure
 
+### Values
+
 Key               | Sample Value | Notes
 ---               | ------------ | -----
 `firmwareVersion` | `'2.0.2'`    |
