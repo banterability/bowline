@@ -42,9 +42,28 @@ client.fetch(function(err, response){
 
 ```javascript
 {
-  values: {} // see description below
+  time: {
+    age: 32.436,
+    timestamp: 1418069760
+  },
+  values: {
+    batteryVoltage: 2942324,
+    firmwareVersion: '2.0.2'
+    isVibrating: false,
+    orientation: 'top'
+    temperature: 68,
+    updateMode: 'normal',
+    vibration: 0
+  }
 }
 ```
+
+### Time
+
+Key         | Sample Value | Notes
+---         | ------------ | -----
+`age`       | `32.436`     | Seconds since data updated
+`timestamp` | `1418069760` | Unix timestamp of data update time
 
 ### Values
 
