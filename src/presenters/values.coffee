@@ -20,13 +20,13 @@ presentValues = (response) ->
   makeValuesUseful(output)
 
 makeValuesUseful = (values) ->
-  # make temperature useful (hundreths of degrees F -> degrees F)
+  # hundreths of degrees F -> degrees F
   values.temperature = values.temperature / 100
 
-  # make isVibrating useful (binary -> bool)
+  # binary -> bool
   values.isVibrating = if values.isVibrating == 0 then false else true
 
-  # make updateMode useful (binary -> descriptive)
+  # binary -> descriptive
   values.updateMode = if values.updateMode == 0 then 'normal' else 'fast'
 
   values
