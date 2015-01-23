@@ -3,6 +3,8 @@ Bowline
 
 An involuntary API for Supermechanical's [Twine][0].
 
+[![Build Status](https://travis-ci.org/banterability/bowline.svg?branch=master)](https://travis-ci.org/banterability/bowline)
+
 
 ## Installation
 
