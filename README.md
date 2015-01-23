@@ -42,6 +42,10 @@ client.fetch(function(err, response){
 
 ```javascript
 {
+  meta: {
+    battery: 'weak',
+    wifiSignal: 'full'
+  },
   time: {
     age: 32.436,
     timestamp: 1418069760
@@ -58,6 +62,13 @@ client.fetch(function(err, response){
 }
 ```
 
+### Meta
+
+Key          | Sample Value | Notes
+---          | ------------ | -----
+`battery`    | `'1/3'`      | Possible values: `plugged in`, `full`, `2/3`, `1/3`, `weak`, `unknown`
+`wifiSignal` | `'full'`     | Possible values: `full`, `2/3`, `1/3`, `weak`, `unknown`
+
 ### Time
 
 Key         | Sample Value | Notes
@@ -72,10 +83,10 @@ Key               | Sample Value | Notes
 `firmwareVersion` | `'2.0.2'`    |
 `temperature`     | `70`         | in degress Fahrenheit
 `vibration`       | `0`          | in milli-Gs
-`orientation`     | `'top'`      | `top`, `bottom`, `left`, `right`, `front`, `back`
-`isVibrating`     | `false`      | `true` or `false`
-`batteryVoltage`  | `2688903`    | in microvolts
-`updateMode`      | `'normal'`   | `normal` or `fast`
+`orientation`     | `'top'`      | Possible values: `top`, `bottom`, `left`, `right`, `front`, `back`
+`isVibrating`     | `false`      | Possible values: `true`, `false`
+`batteryVoltage`  | `2.68`       | in volts
+`updateMode`      | `'normal'`   | Possible values: `normal`, `fast`
 
 
 ## Development
