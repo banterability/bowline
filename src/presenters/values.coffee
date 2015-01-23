@@ -26,6 +26,9 @@ makeValuesUseful = (values) ->
   # binary -> bool
   values.isVibrating = if values.isVibrating == 0 then false else true
 
+  # microvolts -> volts
+  values.batteryVoltage = Math.round(values.batteryVoltage / 10000) / 100
+
   # binary -> descriptive
   values.updateMode = if values.updateMode == 0 then 'normal' else 'fast'
 
